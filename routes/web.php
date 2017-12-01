@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/helo', function (){
     return \App::getLocale();
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
