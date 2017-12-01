@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Link;
+use App\LinkGroup;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

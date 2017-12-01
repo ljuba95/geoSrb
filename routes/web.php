@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    return view('home.index',['posts' => App\Post::all(), 'linkGroups' => App\LinkGroup::all()]);
 });
 
 //Auth::routes();

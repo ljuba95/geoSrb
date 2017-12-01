@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                @include('home.news')
+                @include('home.news',['posts' => $posts])
             </div>
             <div class="col-lg-3 col-md-10 mx-auto">
-                @include('home.links')
+                @include('home.links', ['linkGroups' => $linkGroups])
             </div>
         </div>
     </div>
