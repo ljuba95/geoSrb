@@ -12,16 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/helo', function (){
-    return \App::getLocale();
-});
+//Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
