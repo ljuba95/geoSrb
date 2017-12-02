@@ -17,15 +17,15 @@
 //    //return view('home.index',['posts' => App\Post::all(), 'linkGroups' => App\LinkGroup::all()]);
 //});
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-{
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/', function()
-    {
-        //dd(LaravelLocalization::getCurrentLocale()); //pomocu ovog helpera vadimo konkretne stranice,linkove,grupe.. iz baze
-
-        return view('home.index',['posts' => App\Post::all(), 'linkGroups' => App\LinkGroup::all()]);
-    });
+//    Route::get('/', function()
+//    {
+//        //dd(LaravelLocalization::getCurrentLocale()); //pomocu ovog helpera vadimo konkretne stranice,linkove,grupe.. iz baze
+//
+//        return view('home.index',['posts' => App\Post::all(), 'linkGroups' => App\LinkGroup::all()]);
+//    });
+    Route::get('/','HomeController@index');
 
     Route::get('test',function(){
         return View::make('test');
