@@ -1,5 +1,7 @@
 <p class="higlight-title" style="text-align: center; font-size: 20px">
-    <span id="ctl00_ContentPlaceHolder1_ucLinksByCategory_lblTitle"><b> Linkovi</b> </span></p>
+    
+        <b> Linkovi</b>
+</p>
 
 <div class="higlight-border">
     @foreach($linkGroups as $group)
