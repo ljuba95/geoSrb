@@ -1,5 +1,5 @@
 <div>
-    <h1>Novosti</h1>
+    <h1>@lang('main.news')</h1>
     <div style="padding-top: 5%">
         @foreach($posts as $post)
             <div>
@@ -20,6 +20,6 @@
     </div>
     <!-- Pager -->
     <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Starije vesti &rarr;</a>
+        <a class="btn btn-primary float-right" href="#">@lang('main.older') &rarr;</a>
     </div>
 </div>

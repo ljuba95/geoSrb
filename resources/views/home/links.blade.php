@@ -1,6 +1,6 @@
 <p class="higlight-title" style="text-align: center; font-size: 20px">
     
-        <b> Linkovi</b>
+        <b>@lang('main.links')</b>
 </p>
 
 <div class="higlight-border">
