@@ -3,7 +3,7 @@
     <div style="padding-top: 5%">
         @foreach($posts as $post)
             <div>
-                <a href="#">
+                <a href="news/show/{{$post->id}}">
                     <h2 class="post-title">
                         {{ $post->title }}
                     </h2>

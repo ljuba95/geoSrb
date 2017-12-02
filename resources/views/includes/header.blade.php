@@ -7,7 +7,7 @@
         </li>
     @endforeach
 </ul>
-<header class="masthead" style="background-image: url('img/srb.jpg')">
+<header class="masthead" style="background-image: url('/img/srb.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

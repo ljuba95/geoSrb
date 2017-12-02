@@ -27,11 +27,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 //    });
     Route::get('/','HomeController@index');
 
-    Route::get('test',function(){
-        return View::make('test');
-    });
+    Route::get('news/show/{id}','NewsController@show');
 });
-
 //Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
