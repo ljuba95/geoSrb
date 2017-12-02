@@ -1,3 +1,12 @@
+<ul class="list-inline">
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <li class="list-inline-item">
+            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </li>
+    @endforeach
+</ul>
 <header class="masthead" style="background-image: url('img/srb.jpg')">
     <div class="overlay"></div>
     <div class="container">

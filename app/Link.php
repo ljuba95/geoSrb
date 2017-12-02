@@ -11,4 +11,9 @@ class Link extends Model
     {
         return $this->belongsTo('App\LinkGroup');
     }
+
+    public function language()
+    {
+        return $this->belongsTo('App\Language');
+    }
 }
