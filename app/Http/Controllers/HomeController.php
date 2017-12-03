@@ -37,7 +37,7 @@ class HomeController extends Controller
         // $linkGroups = LinkGroup::all();
         // $posts = News::all();
         $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
-        $posts = News::where('active', 1)->where('language_id', $jezikID)->orderBy('created_at', 'DESC')->paginate(10);
+        $posts = News::where('active', 1)->where('language_id', $jezikID)->orderBy('created_at', 'DESC')->paginate(3);
 
         // $grupeSaJezikom = array();
         // $postovi = array();

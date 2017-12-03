@@ -18,8 +18,9 @@
             </div>  
         @endforeach
     </div>
-    <!-- Pager -->
+    <div class = "float-right">{{ $posts->links() }}</div>
+    <!-- Pager 
     <div class="clearfix">
         <a class="btn btn-primary float-right" href="#">@lang('main.older') &rarr;</a>
-    </div>
+    </div> -->
 </div>
