@@ -39,8 +39,8 @@ class HomeController extends Controller
         $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
         $posts = News::where('active', 1)->where('language_id', $jezikID)->orderBy('created_at', 'DESC')->paginate(10);
 
-        $grupeSaJezikom = array();
-        $postovi = array();
+        // $grupeSaJezikom = array();
+        // $postovi = array();
 
         // kako god linkovi treba da budu sortirani
         // foreach ($linkGroups as $group) {
@@ -60,6 +60,6 @@ class HomeController extends Controller
         // usort($posts, function($a, $b){
             // return strtotime($b->created_at) - strtotime($a->created_at);
         // });
-        return view('home.index',['posts' => $postovi, 'linkGroups' => $grupeSaJezikom]);
+        return view('home.index',['posts' => $posts, 'linkGroups' => $linkGroups]);
     }
 }
