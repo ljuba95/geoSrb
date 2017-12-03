@@ -7,6 +7,7 @@ use App\LinkGroup;
 use App\News;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Language;
 
 class HomeController extends Controller
 {
@@ -29,23 +30,36 @@ class HomeController extends Controller
     {
 
         //todo: andrija ovo je sve shit filtriranje, treba da se menja
-
+        
         $jezik = LaravelLocalization::getCurrentLocale();
-        $linkGroups = LinkGroup::all();
-        $posts = News::all();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        // $linkGroups = LinkGroup::all();
+        // $posts = News::all();
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+        $posts = News::where('active', 1)->where('language_id', $jezikID)->orderBy('created_at', 'DESC')->paginate(10);
+
         $grupeSaJezikom = array();
         $postovi = array();
-        foreach ($linkGroups as $group) {
-            if($group->language->name == $jezik && $group->active){
-                $grupeSaJezikom[] = $group;
-            }
-        }
 
-        foreach ($posts as $post) {
-            if($post->language->name == $jezik && $post->active){
-                $postovi[] = $post;
-            }
-        }
+        // kako god linkovi treba da budu sortirani
+        // foreach ($linkGroups as $group) {
+            // if($group->language->name == $jezik){
+                // $grupeSaJezikom[] = $group;
+            // }
+        // }
+        
+        // foreach ($posts as $post) {
+            // if($post->language->name == $jezik){
+                // $postovi[] = $post;
+                // usort($postovi, function($a, $b){
+                    // return strtotime($b->created_at) - strtotime($a->created_at);
+                // });
+            // }
+        // }
+        // usort($posts, function($a, $b){
+            // return strtotime($b->created_at) - strtotime($a->created_at);
+        // });
         return view('home.index',['posts' => $postovi, 'linkGroups' => $grupeSaJezikom]);
     }
 }
