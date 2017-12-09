@@ -37,7 +37,7 @@
               <th>Izmenjen</th>
             </tr>`;
         json.forEach(function(obj) {
-          rows += `<tr><td>${obj.label}</td>
+          rows += `<tr><td><a href="http:\/\/localhost:8000\/storage\/${obj.label}">${obj.label}</a></td>
             <td>${obj.created_at}</td><td>${obj.updated_at}</td></tr>`;
          });
         document.getElementById('filesTable').innerHTML = rows;
