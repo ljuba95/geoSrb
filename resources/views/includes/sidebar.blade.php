@@ -1,13 +1,15 @@
 <nav id="sidebar-nav">
-  <ul>
-      <a href="#" class="list-group-item">Pocetna</a>
-      <a href="#" class="list-group-item">Kartografski pregled</a>
-      <a href="#" class="list-group-item">Pregled metapodataka</a>
-      <a href="#" class="list-group-item">Osnovno o NIGP-u</a>
-      <a href="#" class="list-group-item">INSPIRE</a>
-      <a href="#" class="list-group-item">Novosti</a>
-      <a href="#" class="list-group-item">Partneri</a>
-      <a href="#" class="list-group-item">Termini</a>
-      <a href="#" class="list-group-item">Kontakt</a>
+
+  <ul class="list.style">
+     <div class="border-style"> <a href="#">Pocetna</a></div>
+     <div class="border-style"> <a href="https://a3.geosrbija.rs/">Kartografski pregled</a></div>
+     <div class="border-style"> <a href="http://www.geosrbija.rs/rga/rga_metadatabrowser.aspx?gui=1&lang=3" >Pregled metapodataka</a> </div>
+      <div class="border-style"><a href="#">Osnovno o NIGP-u</a></div>
+      <div class="border-style"><a href="#" >INSPIRE</a></div>
+      <div class="border-style"><a href="#">Novosti</a></div>
+     <div class="border-style"> <a href="#">Partneri</a></div>
+     <div class="border-style"> <a href="#">Termini</a></div>
+     <div class="border-style"> <a href="#">Kontakt</a></div>
   </ul>
 </nav>
+

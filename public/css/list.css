@@ -1,0 +1,13 @@
+div.border-style {
+    border-bottom-style: solid ;
+    border-bottom-width: 1px;
+   border-top-style: solid;
+   border-top-width: 1px;
+   border-top-color: #99918f;
+   border-bottom-color: #99918f;
+}
+div {
+    padding-top:10px;
+    padding-bottom: 10px;
+
+}
