@@ -14,15 +14,15 @@
 
                  @yield('content')
 
-                <footer>
-                    @include('includes.footer')
-                </footer>
             </div>
 
             <div class="col-lg-3 col-md-3" style="padding-right: 5%">
-                @include('home.links', ['linkGroups' => $linkGroups])
             </div>
         </div>
+        
+        <footer>
+            @include('includes.footer')
+        </footer>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>

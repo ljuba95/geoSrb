@@ -28,6 +28,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/','HomeController@index');
 
     Route::get('news/show/{id}','NewsController@show');
+
+    Route::get('files', 'FileCategoriesController@index');
+    Route::get('/files/{id}', 'FilesController@index');
 });
 //Auth::routes();
 
