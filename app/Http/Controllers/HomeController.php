@@ -62,4 +62,13 @@ class HomeController extends Controller
         // });
         return view('home.index',['posts' => $posts, 'linkGroups' => $linkGroups]);
     }
+
+    public function about(){
+        $jezik = LaravelLocalization::getCurrentLocale();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+
+        return view('home.about', ['linkGroups' => $linkGroups]);
+    }
 }

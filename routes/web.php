@@ -26,6 +26,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 //        return view('home.index',['posts' => App\Post::all(), 'linkGroups' => App\LinkGroup::all()]);
 //    });
     Route::get('/','HomeController@index');
+    Route::get('/about','HomeController@about');
+    
 
     Route::get('news/show/{id}','NewsController@show');
 

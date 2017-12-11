@@ -1,3 +1,5 @@
+<link href="{{ asset('css/news.css') }}" rel="stylesheet">
+
 <div>
     <h1>@lang('main.news')</h1>
     <div style="padding-top: 5%">
