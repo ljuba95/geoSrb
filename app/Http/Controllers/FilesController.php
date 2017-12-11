@@ -10,6 +10,7 @@ class FilesController extends Controller
 {
     function index($id){
         $category = FileCategory::find($id);
+       
         return json_encode($category->files);
     }
 

@@ -3,10 +3,11 @@
     <head>
         @include('includes.head')
     </head>
-    <body>
+    <body class="margin">
         @include('includes.header')
-        <div>
-            <div class="col-lg-3 col-md-3" style="padding-left: 5%; padding-top: 2%">
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3" style="padding-left: 3%;">
                 @include('includes.sidebar')
             </div>
 
@@ -17,12 +18,11 @@
             </div>
 
             <div class="col-lg-3 col-md-3" style="padding-right: 5%">
+                @include('home.links')
             </div>
         </div>
-        
-        <footer>
-            @include('includes.footer')
-        </footer>
+
+        @include('includes.footer')
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>

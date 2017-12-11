@@ -1,7 +1,7 @@
 <ul class="list-inline">
     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
         <li class="list-inline-item">
-            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+            <a class="link" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                 {{ $properties['native'] }}
             </a>
         </li>

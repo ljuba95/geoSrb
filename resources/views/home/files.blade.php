@@ -2,25 +2,25 @@
 @section('title','Fajlovi')
 @section('content')
 <div class="container">
-      <div>
-        <select id="categorySelect" class="form-control" onChange="getFiles()">
-        <option class="placeholder" selected disabled value="">Izaberite kategoriju</option>
-          @foreach ($categories as $category)
-            <option value={{ $category->id }}>{{ $category->name }}</option>
-          @endforeach
-        </select>
+  <div>
+    <select id="categorySelect" class="form-control" onChange="getFiles()">
+      <option class="placeholder" selected disabled value="">Izaberite kategoriju</option>
+      @foreach ($categories as $category)
+        <option value={{ $category->id }}>{{ $category->name }}</option>
+      @endforeach
+    </select>
 
-        <div>
-          <table id="filesTable" style="width:100%">
-            <tr>
-              <th>Naziv</th>
-              <th>Kreiran</th> 
-              <th>Izmenjen</th>
-            </tr>
-          </table>
-        </div>
-      </div>
+    <div>
+      <table id="filesTable" style="width:100%">
+        <tr>
+          <th>Naziv</th>
+          <th>Kreiran</th> 
+          <th>Izmenjen</th>
+        </tr>
+      </table>
     </div>
+  </div>
+</div>
 
 <script type="text/javascript">
   function getFiles(){

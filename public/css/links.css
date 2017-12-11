@@ -1,0 +1,22 @@
+.side-button {
+  padding: 2% 5% 2% 5%;
+  width: 100%;
+  max-width: 100%;  
+  word-wrap: break-word;
+}
+
+.text {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.link-group {
+  text-align: left;
+  font-size: 18px;
+}
+
+.link {
+  text-align: left;
+  font-size: 15px;
+}
