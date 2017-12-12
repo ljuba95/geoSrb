@@ -11,5 +11,13 @@ return [
     'news' => 'Novosti',
     'older' => 'Starije vesti',
     'geoserbia' => 'Geo Srbija',
-    'footer' => 'GeoSrbija - Nacionalna infrastruktura geoprostornih podataka'
+    'footer' => 'GeoSrbija - Nacionalna infrastruktura geoprostornih podataka',
+    'home' => 'Pocetna',
+    'inspire' => 'INSPIRE',
+    'partners' => 'Partneri',
+    'introduction' => 'O nama',
+    'contact' => 'Kontakt',
+    'terms' => 'Termini',
+    'cartography' => 'Kartografski pregled',
+    'metaOverview' => 'Pregled metapodataka'
 ];

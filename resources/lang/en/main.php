@@ -11,5 +11,13 @@ return [
     'news' => 'News',
     'older' => 'Older news',
     'geoserbia' => 'Geo Serbia',
-    'footer' => 'GeoSerbia - National infrastructure of geo data'
+    'footer' => 'GeoSerbia - National infrastructure of geo data',
+    'home' => 'Home',
+    'inspire' => 'INSPIRE',
+    'partners' => 'Partners',
+    'introduction' => 'Introduction',
+    'contact' => 'Contact',
+    'terms' => 'Terms',
+    'cartography' => 'Cartographic review',
+    'metaOverview' => 'Metadata overview'
 ];

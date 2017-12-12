@@ -1,7 +1,7 @@
 <link href="{{ asset('css/news.css') }}" rel="stylesheet">
 
 <div>
-    <h1>@lang('main.news')</h1>
+    <h1 class="post-title" style="text-align: center;">@lang('main.news')</h1>
     <div style="padding-top: 5%">
         @foreach($posts as $post)
             <div>

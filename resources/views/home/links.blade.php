@@ -3,13 +3,13 @@
         <div>
             <!--<form action="http://www.geosrbija.rs/rga/rga_metadatabrowser.aspx?gui=1&lang=3">
              <input type="submit" value="Pregled metapodataka" /> -->
-                <button class="btn side-button btn-success" type="submit">Pregled metapodataka</button>
+                <button class="btn side-button btn-success" type="submit">@lang('main.metaOverview')</button>
            <!-- </form> -->
         </div>
         <div>
             <!--<form action="https://a3.geosrbija.rs/">-->
             
-                <button class="btn side-button btn-success" type="submit">Kartografski pregled</button>
+                <button class="btn side-button btn-success" type="submit">@lang('main.cartography')</button>
             <!--</form>-->
         </div>
     </div>
