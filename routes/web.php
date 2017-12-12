@@ -27,8 +27,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 //    });
     Route::get('/','HomeController@index');
     Route::get('/about','HomeController@about');
+    Route::get('/partners','HomeController@partners');
+    Route::get('/contacts','HomeController@contacts');
+    Route::get('/inspire','HomeController@inspire');
+    Route::get('/terms','HomeController@terms');
     
-
     Route::get('news/show/{id}','NewsController@show');
 
     Route::get('files', 'FileCategoriesController@index');

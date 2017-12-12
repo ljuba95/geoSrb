@@ -71,4 +71,41 @@ class HomeController extends Controller
 
         return view('home.about', ['linkGroups' => $linkGroups]);
     }
+
+    public function partners(){
+        $jezik = LaravelLocalization::getCurrentLocale();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+
+        return view('home.partners', ['linkGroups' => $linkGroups]);
+    }
+
+    public function contacts(){
+        $jezik = LaravelLocalization::getCurrentLocale();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+
+        return view('home.contacts', ['linkGroups' => $linkGroups]);
+    }
+
+
+    public function inspire(){
+        $jezik = LaravelLocalization::getCurrentLocale();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+
+        return view('home.inspire', ['linkGroups' => $linkGroups]);
+    }
+
+    public function terms(){
+        $jezik = LaravelLocalization::getCurrentLocale();
+        $jezik_tabela = Language::where('name', $jezik)->first();
+        $jezikID = $jezik_tabela->id;
+        $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
+
+        return view('home.terms', ['linkGroups' => $linkGroups]);
+    }
 }
