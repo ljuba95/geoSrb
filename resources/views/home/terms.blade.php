@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title','Terms')
 @section('content')
-<h1> Термини </h1>
+<h1 style="text-align: center;"> Термини </h1>
 <p align="justify"> Термини који се најчешће користе код просторних података.</p>
 <p align="justify"> INSPIRE Infrastructure for Spatial Information in Europe – Инфраструктура за просторне информације у Европи. INSPIRE је директива Европске комисије са циљем да креира инфраструктуру за геоподатке у Европи са акцентом на питања животне средине.</p>
 

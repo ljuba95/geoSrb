@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title','Inspire')
 @section('content')
-<h1> INSPIRE </h1>
+<h1 style="text-align: center;"> INSPIRE </h1>
         <p align="justify"> INSPIRE (Infrastructure for SPatial InfoRmation in Europe initiative – Инфраструктура за просторне информације у Европи) је иницијатива коју је покренула, развила и усвојила као директиву Европска унија 14. марта 2007, у сарадњи са државама чланицама и прикљученим државама.
 
 </p>

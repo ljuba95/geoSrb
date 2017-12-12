@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title','Contacts')
 @section('content')
-<h1>Контакт </h1>
+<h1 style="text-align: center;">Контакт </h1>
           <p class="text-center">Republicki geodetski zavod<br>Radna grupa za izradu geoportala</p>
 
             <div class="control-group">
