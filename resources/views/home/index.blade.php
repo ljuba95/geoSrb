@@ -6,5 +6,4 @@
             @include('home.news',['posts' => $posts])
         </div>
     </div>
-
 @endsection
