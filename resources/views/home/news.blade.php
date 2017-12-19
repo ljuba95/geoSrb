@@ -26,3 +26,5 @@
         <a class="btn btn-primary float-right" href="#">@lang('main.older') &rarr;</a>
     </div> -->
 </div>
+
+voy

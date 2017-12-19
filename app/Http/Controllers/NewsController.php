@@ -16,7 +16,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class NewsController
 {
     public function index(){
-
     }
 
     public function show($id){

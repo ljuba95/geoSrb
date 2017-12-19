@@ -36,6 +36,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 
     Route::get('files', 'FileCategoriesController@index');
     Route::get('/files/{id}', 'FilesController@index');
+
+    Route::get('/pages', 'PageController@index');
+    Route::get('/pages/{id}', 'PageController@show');
     //todo: razmisli da l treba sve ove rute da idu pod lokalizaciju ?
 });
 //Auth::routes();
