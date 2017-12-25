@@ -8,6 +8,8 @@ use App\News;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Language;
+use PhpParser\Node\Expr\Cast\Object_;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
@@ -33,33 +35,12 @@ class HomeController extends Controller
         
         $jezik = LaravelLocalization::getCurrentLocale();
         $jezik_tabela = Language::where('name', $jezik)->first();
-        $jezikID = $jezik_tabela->id;
-        // $linkGroups = LinkGroup::all();
-        // $posts = News::all();
+        $jezikID = $jezik_tabela->id;;
         $linkGroups = LinkGroup::where('active', 1)->where('language_id',$jezikID)->get();
         $posts = News::where('active', 1)->where('language_id', $jezikID)->orderBy('created_at', 'DESC')->paginate(3);
+        $menu_items = array();
 
-        // $grupeSaJezikom = array();
-        // $postovi = array();
 
-        // kako god linkovi treba da budu sortirani
-        // foreach ($linkGroups as $group) {
-            // if($group->language->name == $jezik){
-                // $grupeSaJezikom[] = $group;
-            // }
-        // }
-        
-        // foreach ($posts as $post) {
-            // if($post->language->name == $jezik){
-                // $postovi[] = $post;
-                // usort($postovi, function($a, $b){
-                    // return strtotime($b->created_at) - strtotime($a->created_at);
-                // });
-            // }
-        // }
-        // usort($posts, function($a, $b){
-            // return strtotime($b->created_at) - strtotime($a->created_at);
-        // });
         return view('home.index',['posts' => $posts, 'linkGroups' => $linkGroups]);
     }
 

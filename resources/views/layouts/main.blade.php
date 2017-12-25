@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-3" style="padding-left: 3%;">
-                {{menu(LaravelLocalization::getCurrentLocale(),'menu')}}
+                @include('includes.sidebar')
             </div>
 
             <div class="col-lg-6 col-md-6">
@@ -29,5 +29,6 @@
         <script src="/vendor/jquery/jquery.min.js"></script>
         <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
         <script src="/js/clean-blog.min.js"></script>
+        @yield('scripts')
     </body>
 </html>

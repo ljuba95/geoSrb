@@ -8,8 +8,7 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-3" style="padding-left: 3%;">
-                <?php echo e(menu(LaravelLocalization::getCurrentLocale(),'menu')); ?>
-
+                <?php echo $__env->make('includes.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
 
             <div class="col-lg-6 col-md-6">
@@ -30,5 +29,6 @@
         <script src="/vendor/jquery/jquery.min.js"></script>
         <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
         <script src="/js/clean-blog.min.js"></script>
+        <?php echo $__env->yieldContent('scripts'); ?>
     </body>
 </html>

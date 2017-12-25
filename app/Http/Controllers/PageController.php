@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\LinkGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use TCG\Voyager\Models\Page;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use App\LinkGroup;
 
 class PageController extends Controller
 {
@@ -18,6 +18,10 @@ class PageController extends Controller
             array_push($json, array('id' => $page->id, 'title' => $page->title));
         }
 
+
+        foreach($pages as $page){
+            array_push($json, array('id' => $page->id, 'title' => $page->title));
+        }
         return json_encode($json);
     }
 
@@ -34,5 +38,15 @@ class PageController extends Controller
         }
 
         return view('home.pages', ['pageContent' => $pageContent, 'linkGroups' => $grupeSaJezikom]);
+    }
+
+    public static function getMenuItems(){
+        $pages = Page::all();
+
+        foreach ($pages as $page) {
+            $menu_items[] = array('url' => '/pages/' . $page->id, 'title' => $page->title);
+        }
+
+        return $menu_items;
     }
 }
