@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\LinkGroup;
+use App\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use TCG\Voyager\Models\Page;
@@ -41,10 +42,14 @@ class PageController extends Controller
     }
 
     public static function getMenuItems(){
-        $pages = Page::all();
+        $languageName = LaravelLocalization::getCurrentLocale();
+        $language = Language::where('name', $languageName)->get()->first();
+        $pages = Page::where('language_id', $language->id)->get();
+        $menu_items = [];
 
         foreach ($pages as $page) {
-            $menu_items[] = array('url' => '/pages/' . $page->id, 'title' => $page->title);
+                $menu_items[] = array('url' => '/pages/' . $page->id, 'title' => $page->title);                
+            //}
         }
 
         return $menu_items;

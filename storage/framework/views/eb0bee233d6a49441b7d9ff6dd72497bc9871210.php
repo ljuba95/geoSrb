@@ -1,6 +1,7 @@
 <nav id="sidebar-nav">
 
     <ul class="list.style">
+        <div class="border-style first-item"> <a class="side-bar" href="/"><?php echo app('translator')->getFromJson('main.home'); ?></a></div>
         <?php $__currentLoopData = \App\Http\Controllers\PageController::getMenuItems(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="border-style"><a class="side-bar" href="<?php echo e($menu_item['url']); ?>"><?php echo e($menu_item['title']); ?></a></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

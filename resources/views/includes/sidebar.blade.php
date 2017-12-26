@@ -1,6 +1,7 @@
 <nav id="sidebar-nav">
 
     <ul class="list.style">
+        <div class="border-style first-item"> <a class="side-bar" href="/">@lang('main.home')</a></div>
         @foreach(\App\Http\Controllers\PageController::getMenuItems() as $menu_item)
             <div class="border-style"><a class="side-bar" href="{{ $menu_item['url'] }}">{{ $menu_item['title'] }}</a></div>
         @endforeach
