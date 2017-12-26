@@ -11,6 +11,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class PageController extends Controller
 {
+
     public function index(){
         $pages = Page::all();
         $json = array();

@@ -1,9 +1,11 @@
 @extends('layouts.main')
 @section('title','Pocetna')
 @section('content')
-    <div class="container">
-        <div>
-            @include('home.news',['posts' => $posts])
-        </div>
-    </div>
+
+    @include('includes.header')
+    @include('home.nigp_links')
+    @include('home.news',['posts' => $posts])
+    @include('home.partners')
+    @include('home.portals')
+
 @endsection
