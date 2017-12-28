@@ -1,7 +1,13 @@
 <link href="<?php echo e(asset('css/news.css')); ?>" rel="stylesheet">
 
-<div>
-    <h1 class="post-title" style="text-align: center;"><?php echo app('translator')->getFromJson('main.news'); ?></h1>
+<div class="row">
+    <div class="col-md">
+        <h1 class="post-title text-center"><?php echo app('translator')->getFromJson('main.news'); ?></h1>
+    </div>
+</div>
+
+<div class="row">
+
     <div style="padding-top: 5%">
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
@@ -29,5 +35,3 @@
         <a class="btn btn-primary float-right" href="#"><?php echo app('translator')->getFromJson('main.older'); ?> &rarr;</a>
     </div> -->
 </div>
-
-voy

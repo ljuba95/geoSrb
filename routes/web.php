@@ -39,6 +39,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 
     Route::get('/pages', 'PageController@index');
     Route::get('/pages/{id}', 'PageController@show');
+    Route::get('new', function () {
+        return view('newFrontend.index');
+    });
     //todo: razmisli da l treba sve ove rute da idu pod lokalizaciju ?
 });
 //Auth::routes();
