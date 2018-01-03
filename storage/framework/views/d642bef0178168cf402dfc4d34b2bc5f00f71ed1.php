@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
 
   </head>
 
@@ -62,13 +62,26 @@
       <div class="container d-flex flex-column justify-content-between">
         <div class="intro-text">
           <div class="intro-heading ">geoSrbija</div>
-          <div class="intro-lead-in">Digitalna platforma za Nacionalnu infrastrukturu geoprostornih podatataka</div>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Katalog metapodataka</a>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Kartografski pregled</a>
-           <ul class="list-inline">
+          <div class="description">Digitalna platforma za Nacionalnu infrastrukturu geoprostornih podatataka</div>
+          <div>
+            <ul class="snsUl">
+              <li>Pronadji</li>
+              <li class="snsLi">Povezi</li>
+              <li class="snsLi">Prikazi</li>
+            </ul>
+          </div>
+          <div class="buttonWrapper">
+            <div class="btnInnerWrapper">
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Katalog metapodataka</a>
+            </div>
+            <div  class="btnInnerWrapper">
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Kartografski pregled</a>
+            </div>
+          </div>
+           <ul class="headerLanguages">
             <?php $__currentLoopData = LaravelLocalization::getSupportedLocales(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $localeCode => $properties): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-              <li class="list-inline-item">
-                  <a class="lang" rel="alternate" hreflang="<?php echo e($localeCode); ?>" href="<?php echo e(LaravelLocalization::getLocalizedURL($localeCode, null, [], true)); ?>">
+              <li class="languageLi">
+                  <a id="languageLi" rel="alternate" hreflang="<?php echo e($localeCode); ?>" href="<?php echo e(LaravelLocalization::getLocalizedURL($localeCode, null, [], true)); ?>">
                       <?php echo e($properties['native']); ?>
 
                   </a>
@@ -80,41 +93,38 @@
     </header>
 
     <!-- Services -->
-    <section id="services">
+    <section class="nigpSection">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading ">Nacionalna infrastruktura geoprostornih podataka</h2>
           </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center nigpRow">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <a href="#"><img src="img/logos/katalog_metapodataka.svg" alt="Kartografski pregled"></a>
             </span>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="nigpDescription">Katalog metapodataka</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              <a href="#"><img src="img/logos/kartografski_pregled.svg" alt="Kartografski pregled"></a>
             </span>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="nigpDescription">Kartografski pregled</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              <a href="#"><img src="img/logos/video_uputstvo.svg" alt="Kartografski pregled"></a>
             </span>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="nigpDescription">Video uputstvo</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- News Grid -->
-    <section class="py-5" id="news">
+    <section class="newsLabel" id="news">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -124,7 +134,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="newsSection">
       <div class="container">
         <div class="row">
           <div>
@@ -135,7 +145,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section class="partnersSection">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -146,7 +156,7 @@
     </section>
 
     <!-- Team -->
-    <section class="bg-light" id="team">
+    <section class="geoportalsSection">
     <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -155,13 +165,8 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      
-    </section>
-
     <!-- Footer -->
-    <footer>
+    <footer class="footerSection">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -199,40 +204,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
