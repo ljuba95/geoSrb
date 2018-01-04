@@ -41,7 +41,7 @@ class HomeController extends Controller
         $menu_items = array();
 
 
-        return view('home.index',['posts' => $posts, 'linkGroups' => $linkGroups]);
+        return view('newFrontend.index',['posts' => $posts, 'linkGroups' => $linkGroups]);
     }
 
     public function about(){

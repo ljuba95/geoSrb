@@ -45,7 +45,10 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding: 50px 0; } }
+    padding-top: 50px;
+    padding-bottom: 20px;
+  } 
+}
 
 .btn {
   font-family: Open Sans;
@@ -93,7 +96,7 @@ body {
   -webkit-tap-highlight-color: #C98433; }
 
 #mainNav {
-  background-color: #212529; }
+  background-color: #2B2B2B; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -137,7 +140,7 @@ body {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #212529; }
+      background-color: #2B2B2B; }
       #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
@@ -505,20 +508,23 @@ footer {
     font-family: Open Sans; }
 
 ul.social-buttons {
+  margin-top: 10px;
   margin-bottom: 0; }
   ul.social-buttons li a {
-    font-size: 20px;
+    display: flex !important;
+    font-size: 40px;
     line-height: 40px;
     display: block;
-    width: 40px;
-    height: 40px;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     color: white;
     border-radius: 100%;
     outline: none;
-    background-color: #212529; }
+   }
     ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
       background-color: #C98433; }
 
@@ -608,11 +614,12 @@ ul.social-buttons {
 }
 
 .newsSection {
-  background-image: url("../img/header-bg.jpg");  
+  background-image: url("../img/header-bg.jpg");
+  min-height: 400px;
 }
 
 .partnersSection {
-  background-color: #424242 ;
+  background-color: #2B2B2B ;
   color: #FFFFFF;
 }
 
@@ -621,6 +628,114 @@ ul.social-buttons {
 }
 
 .footerSection {
-  background-color: #424242 ;
+  background-color: #2B2B2B ;
   color: #FFFFFF;
+}
+
+.listWrapper {
+  padding-top: 80px;
+  width: 100%;
+}
+
+.rowStyledList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listItem {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.listItem::before {
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+i {
+  display: flex !important;
+  align-items: center;
+}
+
+#carousel {
+  position: relative;
+  width:80%;
+  margin:0 auto;
+}
+
+#slides {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#slides ul {
+  list-style: none;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#slides li {
+  width:100%;
+  float:left;
+  text-align: center;
+  position: relative;
+  font-family:lato, sans-serif;
+}
+
+.sliderButtons {
+  display: flex;
+  font-weight: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttons a {
+  text-align:center;
+  display:block;
+  font-size:50px;
+  outline:0;
+  text-decoration:none;
+  display:block;
+  width:35px;
+}
+
+a#prev:hover, a#next:hover {
+  color:#FFF;
+}
+
+.quote-phrase {
+  font-family: Open Sans;
+  font-weight:300;
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size:18px;
+  color:#FFFFFF;
+}
+
+.quoteContainer {
+  display: table;
+  width: 100%;
+}
+
+.quoteHeading {
+  font-size: 22px;
+  font-family: Open Sans;
+  color: #FFFFFF;
+}
+
+.newsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
 }
